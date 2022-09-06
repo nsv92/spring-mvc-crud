@@ -20,6 +20,22 @@ public class Car {
     @JoinColumn(name = "color_id")
     private Color color;
 
+    public Car() {
+    }
+
+    public Car(String brand, String model, Color color) {
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+    }
+
+    public Car(Long id, String brand, String model, Color color) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+    }
+
     public String getBrand() {
         return brand;
     }

@@ -6,4 +6,6 @@ import ru.gb.entities.Car;
 
 @Repository
 public interface CarRepository extends CrudRepository<Car, Long> {
+
+    Car findCarByModel(String model);
 }

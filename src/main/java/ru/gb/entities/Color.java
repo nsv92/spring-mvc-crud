@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "colors")
 public class Color {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -13,6 +14,18 @@ public class Color {
     @Column(name = "color", nullable = false, unique = true)
     private String color;
 
+    public Color() {
+    }
+
+    public Color(String color) {
+        this.color = color;
+    }
+
+    public Color(Long id, String color) {
+        this.id = id;
+        this.color = color;
+    }
+
     public Long getId() {
         return id;
     }
@@ -20,4 +33,13 @@ public class Color {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
 }
